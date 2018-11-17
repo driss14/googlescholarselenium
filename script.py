@@ -5,9 +5,9 @@ import re
 import pandas as pd
 import os
 
-def parser(articles):
+def parser(soup):
     "Extract articles info"
-    findart = soup_level1.findAll('div',{'class':'gs_r gs_or gs_scl'})
+    findart = soup.findAll('div',{'class':'gs_r gs_or gs_scl'})
     Artlist = []
     for article in findart:
         Article = {}
