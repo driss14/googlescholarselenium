@@ -37,7 +37,7 @@ def parser(articles):
     
     return Artlist
  
-  def next_page(file_name):
+def next_page(file_name):
     "To scrap next page"
     art = parser(BeautifulSoup(driver.page_source,'lxml'))
     pd.DataFrame(art).to_csv('%s.csv'%file_name)
